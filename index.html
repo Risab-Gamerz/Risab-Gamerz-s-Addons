@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+  <meta charset="UTF-8">
+  <meta name="referrer" content="no-referrer-when-downgrade" />
+  <meta name="5609169bc03e27d56ff9f844a76476485f8be97b" content="5609169bc03e27d56ff9f844a76476485f8be97b" />
+  <meta name="google-site-verification" content="nAeiZZ2qWCwiRX58LcelEoXRgAJs7X9wgvoKsusJMkw" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="description" content="Best texture packs, mods, shaders, and skins for Minecraft PE / Bedrock by NetherSpark Studios.">
+  
+  <meta name="keywords" content="mcpe, minecraft, NetherSpark Studios, texture pack, mods, shaders, addons, fps booster, rg shader, aesthetic sounds">
+ 
+  <meta name="author" content="Risab Das">
+  
+  <title>NetherSpark Studios By RisabGamerz | MCPE Mods & Packs</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: white;
+      text-align: center;
+      overflow-y: auto;
+      padding: 10px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    h1 {
+      font-family: 'Black Han Sans', sans-serif;
+      font-size: 5rem;
+      color: #FFA500;
+      text-shadow: 0 0 20px rgba(255, 140, 0, 0.8), 0 0 40px rgba(255, 69, 0, 0.6);
+      margin-bottom: 20px;
+      text-decoration: underline;
+      text-decoration-color: black;
+      white-space: nowrap;
+    }
+
+    p {
+      font-size: 1.3rem;
+      color: #dcdcdc;
+      margin-bottom: 20px;
+    }
+
+    .creator {
+      color: orange;
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+
+    a {
+      color: Cyan;
+      font-size: 1rem;
+      display: block;
+      margin-bottom: 8px;
+      text-decoration: none;
+    }
+
+    .search-container {
+      margin: 30px auto;
+      max-width: 500px;
+    }
+
+    #searchInput {
+      width: 100%;
+      padding: 12px 20px;
+      border-radius: 25px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      box-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
+    }
+
+    /* Updated Grid Container for vertical emphasis */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted min-width for more vertical space */
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+
+    .grid-item {
+      background: rgba(0, 0, 0, 0.7);
+      border: 2px solid rgba(255, 140, 0, 0.6);
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(255, 140, 0, 0.6);
+      padding: 5px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%; /* Ensure grid items take up full available height in a row */
+    }
+
+    .grid-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 30px rgba(255, 165, 0, 0.8), 0 10px 40px rgba(255, 255, 255, 0.5);
+    }
+
+    .grid-item h2 {
+      font-family: 'Black Han Sans', sans-serif;
+      color: orange;
+      text-shadow: 0 0 20px rgba(255, 140, 0, 0.8);
+      margin-bottom: 15px;
+    }
+
+    .grid-item a {
+      font-size: 1.2rem;
+      color: #fff;
+      background: linear-gradient(90deg, orange, orangered);
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, box-shadow 0.3s;
+      display: inline-block;
+      margin-top: auto; /* Pushes button to the bottom */
+      align-self: center; /* Center the button within the flex item */
+    }
+
+    .grid-item a:hover {
+      background: linear-gradient(90deg, orangered, orange);
+      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.6), 0 6px 25px rgba(255, 165, 0, 0.5);
+    }
+
+    /* Image adjustments for vertical display */
+    img {
+      width: 100%;
+      height: 250px; /* Increased height to give more vertical space */
+      object-fit: cover; /* Changed from 'contain' to 'cover' for a filled look, adjust as needed */
+      border-radius: 10px;
+      margin-bottom: 10px; /* Space between image and title */
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted for tablets */
+      }
+      img {
+        height: 200px; /* Slightly reduce image height on smaller screens */
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.2rem; }
+      p { font-size: 1rem; }
+      .grid-container {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+        padding: 10px;
+      }
+      .grid-item {
+        margin-bottom: 15px;
+      }
+      img {
+        height: 180px; /* Further reduce image height on mobile */
+      }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="sparkCanvas"></canvas>
+  <h1>NetherSpark Studios</h1>
+  <p>Explore futuristic mods, shaders, and texture packs for Minecraft Pocket & Bedrock Edition!</p>
+  <p class="creator">Founder:RisabGamerz</p>
+  <a href="mc_projects/https://www.youtube.com/@NetherSparkStudios" target="_blank">Youtube Channel</a>
+  <a href="mc_projects/https://mcpedl.com/user/risabgamerz/page/" target="_blank">MCPEDL Page</a>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="🔍 Search mods, shaders, or packs...">
+  </div>
+
+  <div class="grid-container" id="gridContainer">
+      
+    <div class="grid-item">
+      <img src="https://raw.githubusercontent.com/NetherSparkStudios/NetherSpark-Studios/refs/heads/main/minecraft_projects_thumbnail/rg-shader-cover.png" alt="RG Shader">
+      <h2>🌅 RG Shader</h2>
+      <a href="mc_projects/rgshader.html">Visit Page</a>
+    </div>
+    <div class="grid-item">
+      <img src="https://raw.githubusercontent.com/NetherSparkStudios/NetherSpark-Studios/refs/heads/main/minecraft_projects_thumbnail/asthetic-sounds.jpg" alt="Aesthetic Sound">
+      <h2>🎵 Aesthetic Sound</h2>
+      <a href="mc_projects/aestheticsound.html">Visit Page</a>
+    </div>
+    <div class="grid-item">
+      <img src="https://raw.githubusercontent.com/NetherSparkStudios/NetherSpark-Studios/refs/heads/main/minecraft_projects_thumbnail/Warriors_client.jpeg" alt="Warriors PvP Client">
+      <h2>🛡️ Warriors PvP Client</h2>
+      <a href="mc_projects/warriors'client.html">Visit Page</a>
+    </div>
+    <div class="grid-item">
+      <img src="https://raw.githubusercontent.com/NetherSparkStudios/NetherSpark-Studios/refs/heads/main/minecraft_projects_thumbnail/red-dragon-16x-cover.jpg" alt="Red Dragon 16x">
+      <h2>🟥 Red Dragon 16x</h2>
+      <a href="mc_projects/reddragon.html">Visit Page</a>
+    </div>
+    <div class="grid-item">
+      <img src="https://raw.githubusercontent.com/NetherSparkStudios/NetherSpark-Studios/refs/heads/main/minecraft_projects_thumbnail/Night%20vision.jpg" alt="Night Vision">
+      <h2>🌌 Night Vision</h2>
+      <a href="mc_projects/nightvision.html">Visit Page</a>
+    </div>
+    <div class="grid-item">
+      <img src="https://raw.githubusercontent.com/NetherSparkStudios/NetherSpark-Studios/refs/heads/main/minecraft_projects_thumbnail/warriors-64x.jpg" alt="Warriors 64x">
+      <h2>⚔️ Warriors 64x</h2>
+      <a href="mc_projects/warriors'64x.html">Visit Page</a>
+    </div>
+    <div class="grid-item">
+      <img src="https://raw.githubusercontent.com/NetherSparkStudios/NetherSpark-Studios/refs/heads/main/minecraft_projects_thumbnail/gamma-optimizer.png" alt="Gamma Optimizer">
+      <h2>📈 Gamma Optimizer</h2>
+      <a href="mc_projects/gammaop.html">Visit Page</a>
+    </div>
+    <div class="grid-item">
+      <img src="https://raw.githubusercontent.com/NetherSparkStudios/NetherSpark-Studios/refs/heads/main/minecraft_projects_thumbnail/pure-optimizer.jpg" alt="Pure Optimizer">
+      <h2>🔧 Pure Optimizer</h2>
+      <a href="mc_projects/pureop.html">Visit Page</a>
+    </div>
+    <div class="grid-item">
+      <img src="https://raw.githubusercontent.com/NetherSparkStudios/NetherSpark-Studios/refs/heads/main/minecraft_projects_thumbnail/fps-booster.png" alt="FPS Booster">
+      <h2>🎮 FPS Booster</h2>
+      <a href="mc_projects/fpsbooster.html">Visit Page</a>
+    </div>
+    <div class="grid-item">
+      <img src="https://raw.githubusercontent.com/NetherSparkStudios/NetherSpark-Studios/refs/heads/main/minecraft_projects_thumbnail/red-ui-transparent.png" alt="Red UI Transparent">
+      <h2>🟥 Red UI Transparent</h2>
+      <a href="mc_projects/redui.html">Visit Page</a>
+    </div>
+    <div class="grid-item">
+      <img src="https://raw.githubusercontent.com/NetherSparkStudios/NetherSpark-Studios/refs/heads/main/minecraft_projects_thumbnail/render-distance-limiter.jpg" alt="Render Distance Limiter">
+      <h2>Render Distance Limiter</h2>
+      <a href="mc_projects/renderdistance.html">Visit Page</a>
+    </div>
+    <div class="grid-item">
+      <img src="https://raw.githubusercontent.com/NetherSparkStudios/NetherSpark-Studios/refs/heads/main/minecraft_projects_thumbnail/the-one-hit-sword.jpg" alt="One Hit Sword">
+      <h2>One Hit Sword</h2>
+      <a href="mc_projects/onehitsword.html">Visit Page</a>
+    </div>
+        <div class="grid-item">
+      <img src="https://raw.githubusercontent.com/NetherSparkStudios/NetherSparkStudios.github.io/refs/heads/main/minecraft_projects_thumbnail/vibrant-visuals-extreme-cover.png" alt="Vibrant Visuals Extreme">
+      <h2>Vibrant Visuals Extreme</h2>
+      <a href="mc_projects/vibrant_visual.html">Visit Page</a>
+    </div>
+  </div>
+  <p>All Rights Reserved ©</p>
+  <script>
+    const canvas = document.getElementById('sparkCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const sparks = [];
+    const numberOfSparks = 100;
+
+    class Spark {
+      constructor(x, y, size, speedX, speedY) {
+        this.x = x;
+        this.y = y;
+        this.size = size;
+        this.speedX = speedX;
+        this.speedY = speedY;
+        this.opacity = 1;
+      }
+
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 165, 0, ${this.opacity})`;
+        ctx.fill();
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        this.opacity -= 0.02;
+        if (this.opacity <= 0) {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.size = Math.random() * 3 + 1;
+          this.speedX = Math.random() * 2 - 1;
+          this.speedY = Math.random() * 2 - 1;
+          this.opacity = 1;
+        }
+      }
+    }
+
+    function createSparks() {
+      for (let i = 0; i < numberOfSparks; i++) {
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * canvas.height;
+        const size = Math.random() * 3 + 1;
+        const speedX = Math.random() * 2 - 1;
+        const speedY = Math.random() * 2 - 1;
+        sparks.push(new Spark(x, y, size, speedX, speedY));
+      }
+    }
+
+    function animateSparks() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      sparks.forEach(spark => {
+        spark.update();
+        spark.draw();
+      });
+      requestAnimationFrame(animateSparks);
+    }
+
+    createSparks();
+    animateSparks();
+
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      sparks.length = 0;
+      createSparks();
+    });
+
+    // Search functionality
+    const searchInput = document.getElementById('searchInput');
+    const gridItems = document.querySelectorAll('.grid-item');
+
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase();
+      gridItems.forEach(item => {
+        const title = item.querySelector('h2').innerText.toLowerCase();
+        item.style.display = title.includes(query) ? '' : 'none';
+      });
+    });
+  </script>
+
+
+  <script>
+(function(oekzve){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = oekzve || {};
+s.src = "\/\/vast-size.com\/c\/Ds9H6.b\/2f5WlxS\/WxQp9vNWjcUSz_Ntjdkv2KMmia0q2iNMTvMk2yOaTBY-zr";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+  </script>
+  
+  <script>
+(function(mlqlz){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = mlqlz || {};
+s.src = "\/\/grimy-bicycle.com\/b.XaV\/sHdeGml\/0PY\/WgcC\/QeJmA9wu\/ZfU\/lOkaPNTaYp1\/M\/ztYi5TOTTIEItlN\/jfUqzcN-jYkd5\/MXgL";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+  </script>
+  
+<script>
+(function(ecdiu){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = ecdiu || {};
+s.src = "\/\/grimy-bicycle.com\/bWXdVDs.dcGTlS0wY\/WtcY\/weOmG9XucZ\/UslekCPPTXYG1lNWD\/APwQMIj_QctqNbjnUZ0-MQD\/Ahy-NgQZ";
+s.async = true;
+s.referrerPolicy = 'no-referrer-when-downgrade';
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
+
+</body>
+</html>
