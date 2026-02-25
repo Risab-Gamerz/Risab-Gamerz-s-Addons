@@ -7,12 +7,12 @@
   <meta name="5609169bc03e27d56ff9f844a76476485f8be97b" content="5609169bc03e27d56ff9f844a76476485f8be97b" />
   <meta name="google-site-verification" content="nAeiZZ2qWCwiRX58LcelEoXRgAJs7X9wgvoKsusJMkw" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="NetherSpark Studios – professional MCPE/Bedrock add-ons, apps & software. Minimal OLED black & white design.">
-  <meta name="keywords" content="mcpe, minecraft, NetherSpark Studios, apps, software, texture pack, mods, oled black">
+  <meta name="description" content="NetherSpark Studios – professional MCPE/Bedrock add-ons. Minimal OLED black & white design.">
+  <meta name="keywords" content="mcpe, minecraft, NetherSpark Studios, texture pack, mods, shaders, oled black, professional">
   <meta name="author" content="Risab Das (RisabGamerz)">
-  <title>NetherSpark Studios · main hub</title>
+  <title>NetherSpark Studios · professional OLED</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <!-- Fonts: Inter for UI -->
+  <!-- Fonts: Inter for UI, Playfair Display for elegant touch (optional) but stick to Inter for clean look -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     /* ---------- RESET – TRUE OLED BLACK, MINIMAL, PROFESSIONAL ---------- */
@@ -36,7 +36,7 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
-    /* very subtle texture */
+    /* very subtle texture (optional, barely visible) */
     body::before {
       content: "";
       position: fixed;
@@ -55,7 +55,7 @@
       height: 100%;
       pointer-events: none;
       z-index: 0;
-      opacity: 0.3; 
+      opacity: 0.4; /* very faint, just for depth */
     }
 
     .wrapper {
@@ -65,32 +65,40 @@
       margin: 0 auto;
     }
 
-    /* ---------- TYPOGRAPHY ---------- */
+    /* ---------- TYPOGRAPHY – PURE BLACK & WHITE, NO ORANGE/RED ---------- */
     h1 {
-      font-weight: 500;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
       font-size: clamp(3rem, 12vw, 6rem);
       text-transform: uppercase;
       letter-spacing: 8px;
       color: #ffffff;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.15);
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
       margin-bottom: 0.5rem;
       line-height: 1.1;
+      font-weight: 500;
     }
 
     .subhead {
+      font-family: 'Inter', sans-serif;
       font-weight: 300;
       font-size: 1.4rem;
       color: #aaaaaa;
       letter-spacing: 4px;
       text-transform: uppercase;
       margin-bottom: 1.5rem;
+      border: none;
+      background: transparent;
+      box-shadow: none;
       padding: 0;
     }
 
     .creator-tag {
+      font-family: 'Inter', sans-serif;
       font-weight: 300;
       font-size: 1.2rem;
       color: #888888;
+      background: transparent;
       border: 1px solid #333333;
       padding: 0.6rem 2.5rem;
       display: inline-block;
@@ -99,105 +107,17 @@
       backdrop-filter: blur(2px);
     }
 
-    /* main page 3-section navigation cards */
-    .section-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2.5rem;
-      margin: 3.5rem 0 4rem;
-    }
-
-    .section-card {
-      background: #0a0a0a;
-      border: 1px solid #222222;
-      padding: 2.5rem 1.8rem 2.8rem;
-      transition: all 0.25s ease;
-      text-decoration: none;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .section-card:hover {
-      border-color: #555555;
-      background: #111111;
-      transform: translateY(-5px);
-    }
-
-    .section-icon {
-      font-size: 4rem;
-      line-height: 1;
-      margin-bottom: 1.2rem;
-      filter: grayscale(100%);
-      opacity: 0.9;
-      transition: 0.2s;
-    }
-
-    .section-card:hover .section-icon {
-      opacity: 1;
-      filter: grayscale(70%);
-    }
-
-    .section-card h2 {
-      font-weight: 400;
-      font-size: 2.2rem;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: #ffffff;
-      background: transparent;
-      padding: 0.3rem 0;
-      margin: 0 0 1rem 0;
-      border-bottom: 1px solid #333333;
-      width: 100%;
-    }
-
-    .section-description {
-      font-weight: 300;
-      color: #aaaaaa;
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-      padding: 0 0.5rem;
-    }
-
-    .section-meta {
-      font-weight: 300;
-      color: #666666;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      border: 1px solid #333333;
-      padding: 0.5rem 1.8rem;
-      background: transparent;
-      margin-top: auto;
-      transition: 0.15s;
-    }
-
-    .section-card:hover .section-meta {
-      border-color: #777777;
-      color: #dddddd;
-    }
-
-    /* divider */
-    .divider {
-      width: 120px;
-      height: 1px;
-      background: #222222;
-      margin: 2rem auto;
-    }
-
-    /* social links – identical to subsite style */
+    /* social links – monochrome, minimal */
     .social-links {
       display: flex;
       justify-content: center;
       gap: 2rem 2.5rem;
       flex-wrap: wrap;
-      margin: 2rem 0 2rem;
+      margin: 2rem 0 3rem;
     }
 
     .social-links a {
+      font-family: 'Inter', sans-serif;
       font-weight: 400;
       font-size: 1.2rem;
       color: #cccccc;
@@ -219,31 +139,117 @@
       background: #111111;
     }
 
-    /* additional link to the subsite (minecraft projects hub) */
-    .subsite-link {
-      margin: 3rem 0 2rem;
+    /* search – minimal, white/gray */
+    .search-container {
+      margin: 2rem auto 3.5rem;
+      max-width: 600px;
     }
 
-    .subsite-link a {
-      font-weight: 300;
-      font-size: 1.2rem;
-      color: #bbbbbb;
+    #searchInput {
+      width: 100%;
+      padding: 1rem 1.8rem;
+      background: #000000;
       border: 1px solid #333333;
-      padding: 0.9rem 3rem;
+      color: #ffffff;
+      font-size: 1.2rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      outline: none;
+      transition: 0.15s;
+      border-radius: 0;
+    }
+
+    #searchInput:focus {
+      border-color: #666666;
+      background: #0a0a0a;
+    }
+
+    #searchInput::placeholder {
+      color: #444444;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    /* ---------- GRID – CLEAN, MINIMAL, UNCROPPED IMAGES ---------- */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 1rem 0 3rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .grid-item {
+      background: #0a0a0a;
+      border: 1px solid #222222;
+      padding: 1.8rem 1.5rem 2rem;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .grid-item:hover {
+      border-color: #444444;
+      background: #111111;
+      transform: translateY(-2px);
+    }
+
+    /* image fit: contain, no cropping */
+    .grid-item img {
+      width: 100%;
+      height: auto;
+      max-height: 220px;
+      object-fit: contain;
+      background: #000000;
+      border: 1px solid #2a2a2a;
+      margin-bottom: 1.5rem;
+      padding: 0;
+      transition: 0.15s;
+    }
+
+    .grid-item:hover img {
+      border-color: #555555;
+    }
+
+    .grid-item h2 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 1.6rem;
+      color: #ffffff;
+      background: transparent;
+      padding: 0.3rem 0;
+      margin: 0 0 1.5rem 0;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #333333;
+      width: 100%;
+    }
+
+    .grid-item a {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 1.1rem;
+      color: #cccccc;
+      background: transparent;
+      padding: 0.6rem 2rem;
+      border: 1px solid #333333;
       text-decoration: none;
       text-transform: uppercase;
-      letter-spacing: 3px;
-      transition: 0.2s;
-      display: inline-block;
+      letter-spacing: 2px;
+      transition: 0.15s;
+      margin-top: auto;
+      width: fit-content;
     }
 
-    .subsite-link a:hover {
+    .grid-item a:hover {
+      color: #ffffff;
       border-color: #777777;
-      color: white;
-      background: #111111;
+      background: #1a1a1a;
     }
 
     .footer-note {
+      font-family: 'Inter', sans-serif;
       font-size: 0.9rem;
       color: #666666;
       border-top: 1px solid #222222;
@@ -252,6 +258,7 @@
       margin: 2rem auto 0;
       font-weight: 300;
       letter-spacing: 1px;
+      background: transparent;
     }
 
     ::selection {
@@ -262,8 +269,9 @@
     @media (max-width: 700px) {
       h1 { font-size: 2.8rem; letter-spacing: 4px; }
       .subhead { font-size: 1.1rem; }
-      .section-card h2 { font-size: 1.8rem; }
       .social-links a { font-size: 1rem; padding: 0.6rem 1.5rem; }
+      .grid-item img { max-height: 170px; }
+      .grid-item h2 { font-size: 1.4rem; }
     }
   </style>
 </head>
@@ -271,70 +279,143 @@
   <canvas id="particleCanvas"></canvas>
   <div class="wrapper">
     <h1>NETHERSPARK</h1>
-    <div class="subhead">STUDIOS · MAIN HUB</div>
+    <div class="subhead">STUDIOS</div>
     <div class="creator-tag">FOUNDER: RISABGAMERZ</div>
 
-    <!-- social links (same as subsite) -->
     <div class="social-links">
       <a href="https://www.youtube.com/@NetherSparkStudios" target="_blank" rel="noopener">📺 YOUTUBE</a>
       <a href="https://mcpedl.com/user/risabgamerz/page/" target="_blank" rel="noopener">⛏️ MCPEDL</a>
-      <!-- additional placeholder for github or other (optional) -->
-      <a href="#" target="_blank" rel="noopener">🐙 GITHUB</a>
     </div>
 
-    <!-- 3 SECTIONS: MINECRAFT PROJECTS, APPS, SOFTWARE -->
-    <div class="section-grid">
-      
-      <!-- MINECRAFT PROJECTS – links to the existing subsite -->
-      <a href="https://risab-gamerz.github.io/mcbe-addons/" class="section-card">   <!-- we point to main subsite (the page you already built, assumed to be index.html in same dir) -->
-        <div class="section-icon">⛏️</div>
-        <h2>MINECRAFT<br>PROJECTS</h2>
-        <div class="section-description">
-          MCPE/Bedrock add-ons · shaders · texture packs · optimization mods
-        </div>
-        <span class="section-meta">VIEW COLLECTION →</span>
-      </a>
-
-      <!-- APPS – placeholder (no existing page, but we create a dummy link) -->
-      <a href="apps.html" class="section-card">
-        <div class="section-icon">📱</div>
-        <h2>APPS</h2>
-        <div class="section-description">
-          Mobile tools · launchers · utility apps for Minecraft & content creators
-        </div>
-        <span class="section-meta">COMING SOON</span>
-      </a>
-
-      <!-- SOFTWARE – placeholder -->
-      <a href="software.html" class="section-card">
-        <div class="section-icon">🖥️</div>
-        <h2>SOFTWARE</h2>
-        <div class="section-description">
-          Desktop applications · editor tools · shader compilers · studio utilities
-        </div>
-        <span class="section-meta">IN DEVELOPMENT</span>
-      </a>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="search add-ons, shaders, packs...">
     </div>
 
-    <!-- subtle divider / note -->
-    <div class="divider"></div>
+    <!-- 13 items – clean, professional, uncropped thumbnails -->
+  <div class="grid-container" id="gridContainer">
 
-    <!-- direct link to the minecraft subsite (already linked above, but extra emphasis) -->
-    <div class="subsite-link">
-      <a href="index.html">➤ EXPLORE MINECRAFT ADD-ONS ➤</a>
-    </div>
-
-    <div class="footer-note">© NETHERSPARK STUDIOS · OLED BLACK · PROFESSIONAL HUB</div>
+  <!-- 1 -->
+  <div class="grid-item">
+    <img src="https://raw.githubusercontent.com/Risab-Gamerz/mcbe-addons/refs/heads/main/thumbnails/xray-glow.jpg" alt="X Ray Glow">
+    <h2>X Ray Glow</h2>
+    <a href="Add-ons/xray.html">VIEW</a>
   </div>
 
-  <!-- very subtle particle background (identical to subsite, but fine) -->
+  <!-- 2 -->
+  <div class="grid-item">
+    <img src="https://raw.githubusercontent.com/Risab-Gamerz/mcbe-addons/refs/heads/main/thumbnails/vein_miner.gif" alt="Ore & Tree Vein Miner">
+    <h2>Ore & Tree Vein Miner</h2>
+    <a href="Add-ons/ore_tree_vein_miner.html">VIEW</a>
+  </div>
+
+  <!-- 3 -->
+  <div class="grid-item">
+    <img src="https://raw.githubusercontent.com/Risab-Gamerz/mcbe-addons/refs/heads/main/thumbnails/Night_Vision.jpg" alt="Night Vision">
+    <h2>NIGHT VISION</h2>
+    <a href="Add-ons/night_vision.html">VIEW</a>
+  </div>
+
+  <!-- 4 -->
+  <div class="grid-item">
+    <img src="https://raw.githubusercontent.com/Risab-Gamerz/mcbe-addons/refs/heads/main/thumbnails/rg_visuals.gif" alt="RG Visuals">
+    <h2>RG Visuals</h2>
+    <a href="Add-ons/rg_visuals.html">VIEW</a>
+  </div>
+
+  <!-- 5 -->
+  <div class="grid-item">
+    <img src="https://raw.githubusercontent.com/Risab-Gamerz/mcbe-addons/refs/heads/main/thumbnails/RG_Shader.gif" alt="RG Shader">
+    <h2>RG SHADER</h2>
+    <a href="Add-ons/rg_shader.html">VIEW</a>
+  </div>
+
+  <!-- 6 -->
+  <div class="grid-item">
+    <img src="https://raw.githubusercontent.com/Risab-Gamerz/mcbe-addons/refs/heads/main/thumbnails/fps_booster.jpg" alt="FPS Booster">
+    <h2>FPS BOOSTER</h2>
+    <a href="Add-ons/fps_booster.html">VIEW</a>
+  </div>
+
+  <!-- Others -->
+
+  <div class="grid-item">
+    <img src="https://raw.githubusercontent.com/Risab-Gamerz/mcbe-addons/refs/heads/main/thumbnails/aesthetic_sounds.jpg" alt="Aesthetic Sound">
+    <h2>AESTHETIC SOUND</h2>
+    <a href="Add-ons/aesthetic_sounds.html">VIEW</a>
+  </div>
+
+  <div class="grid-item">
+    <img src="https://raw.githubusercontent.com/Risab-Gamerz/mcbe-addons/refs/heads/main/thumbnails/warrior_client.png" alt="Warriors PvP Client">
+    <h2>WARRIORS PVP</h2>
+    <a href="Add-ons/warriors_client.html">VIEW</a>
+  </div>
+
+  <div class="grid-item">
+    <img src="https://raw.githubusercontent.com/Risab-Gamerz/mcbe-addons/refs/heads/main/thumbnails/red_dragon.jpg" alt="Red Dragon 16x">
+    <h2>RED DRAGON 16X</h2>
+    <a href="Add-ons/reddragon.html">VIEW</a>
+  </div>
+
+  <div class="grid-item">
+    <img src="https://raw.githubusercontent.com/Risab-Gamerz/mcbe-addons/refs/heads/main/thumbnails/warriors-64x.jpg" alt="Warriors 64x">
+    <h2>WARRIORS 64X</h2>
+    <a href="Add-ons/warriors'64x.html">VIEW</a>
+  </div>
+
+  <div class="grid-item">
+    <img src="https://raw.githubusercontent.com/Risab-Gamerz/mcbe-addons/refs/heads/main/thumbnails/Gamma_optimizer.jpg" alt="Gamma Optimizer">
+    <h2>GAMMA OPTIMIZER</h2>
+    <a href="Add-ons/gammaop.html">VIEW</a>
+  </div>
+
+  <div class="grid-item">
+    <img src="https://raw.githubusercontent.com/Risab-Gamerz/mcbe-addons/refs/heads/main/thumbnails/pure_op.jpg" alt="Pure Optimizer">
+    <h2>PURE OPTIMIZER</h2>
+    <a href="Add-ons/pureop.html">VIEW</a>
+  </div>
+
+  <div class="grid-item">
+    <img src="https://raw.githubusercontent.com/Risab-Gamerz/mcbe-addons/refs/heads/main/thumbnails/Dark_ui.jpg" alt="Red UI Transparent">
+    <h2>RED UI</h2>
+    <a href="Add-ons/darkui.html">VIEW</a>
+  </div>
+
+  <div class="grid-item">
+    <img src="https://raw.githubusercontent.com/Risab-Gamerz/mcbe-addons/refs/heads/main/thumbnails/rd_limiter.jpg" alt="Render Distance Limiter">
+    <h2>RENDER LIMITER</h2>
+    <a href="Add-ons/rd_limiter.html">VIEW</a>
+  </div>
+
+  <div class="grid-item">
+    <img src="https://raw.githubusercontent.com/Risab-Gamerz/mcbe-addons/refs/heads/main/thumbnails/one_hit_sword.jpg" alt="One Hit Sword">
+    <h2>ONE HIT SWORD</h2>
+    <a href="Add-ons/onehitsword.html">VIEW</a>
+  </div>
+
+  <div class="grid-item">
+    <img src="https://raw.githubusercontent.com/Risab-Gamerz/mcbe-addons/refs/heads/main/thumbnails/vibrant_visuals_extreme.jpg" alt="Vibrant Visuals Extreme">
+    <h2>VIBRANT VISUALS</h2>
+    <a href="Add-ons/vibrant_visual.html">VIEW</a>
+  </div>
+  <div class="grid-item">
+    <img src="https://raw.githubusercontent.com/Risab-Gamerz/mcbe-addons/refs/heads/main/thumbnails/Land_clearer.jpg" alt="Land Clearer">
+    <h2>Land Clearer</h2>
+    <a href="Add-ons/land_clearer.html">VIEW</a>
+  </div>
+
+</div>
+
+    <div class="footer-note">© NETHERSPARK STUDIOS · OLED BLACK · PROFESSIONAL EDITION</div>
+  
+
+  <!-- very subtle particle background (white/gray, barely visible) -->
   <script>
     (function() {
       const canvas = document.getElementById('particleCanvas');
       const ctx = canvas.getContext('2d');
       let width, height;
       let particles = [];
-      const PARTICLE_COUNT = 70;
+      const PARTICLE_COUNT = 80; // fewer, more subtle
 
       function initParticles() {
         particles = [];
@@ -345,7 +426,7 @@
             radius: Math.random() * 2.5 + 0.5,
             speedX: (Math.random() - 0.5) * 0.1,
             speedY: (Math.random() - 0.5) * 0.05,
-            baseOpacity: Math.random() * 0.2 + 0.1,
+            baseOpacity: Math.random() * 0.2 + 0.1, // very faint
           });
         }
       }
@@ -360,6 +441,7 @@
 
       function drawParticles() {
         ctx.clearRect(0, 0, width, height);
+        // pure black background
         ctx.fillStyle = '#000000';
         ctx.fillRect(0, 0, width, height);
         
@@ -374,9 +456,10 @@
           let op = p.baseOpacity + Math.sin(Date.now() * 0.002 + p.radius) * 0.05;
           op = Math.min(0.3, Math.max(0.05, op));
 
+          // white/gray particles
           ctx.beginPath();
           ctx.arc(p.x, p.y, p.radius * 1.5, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(180, 180, 180, ${op * 0.3})`;
+          ctx.fillStyle = `rgba(180, 180, 180, ${op * 0.3})`; // very soft glow
           ctx.fill();
 
           ctx.beginPath();
@@ -391,9 +474,20 @@
       resizeCanvas();
       drawParticles();
     })();
+
+    // search filter
+    const searchInput = document.getElementById('searchInput');
+    const gridItems = document.querySelectorAll('.grid-item');
+    searchInput.addEventListener('input', function (e) {
+      const q = e.target.value.trim().toLowerCase();
+      gridItems.forEach(item => {
+        const title = item.querySelector('h2').innerText.toLowerCase();
+        item.style.display = title.includes(q) ? 'flex' : 'none';
+      });
+    });
   </script>
 
-  <!-- third-party scripts (preserved from original request, but kept minimal) -->
+  <!-- third-party scripts (preserved) -->
   <script>(function (o) { var d = document, s = d.createElement('script'), l = d.scripts[d.scripts.length - 1]; s.settings = o || {}; s.src = "\/\/vast-size.com\/c\/Ds9H6.b\/2f5WlxS\/WxQp9vNWjcUSz_Ntjdkv2KMmia0q2iNMTvMk2yOaTBY-zr"; s.async = true; s.referrerPolicy = 'no-referrer-when-downgrade'; l.parentNode.insertBefore(s, l); })({})</script>
   <script>(function (o) { var d = document, s = d.createElement('script'), l = d.scripts[d.scripts.length - 1]; s.settings = o || {}; s.src = "\/\/grimy-bicycle.com\/b.XaV\/sHdeGml\/0PY\/WgcC\/QeJmA9wu\/ZfU\/lOkaPNTaYp1\/M\/ztYi5TOTTIEItlN\/jfUqzcN-jYkd5\/MXgL"; s.async = true; s.referrerPolicy = 'no-referrer-when-downgrade'; l.parentNode.insertBefore(s, l); })({})</script>
   <script>(function (o) { var d = document, s = d.createElement('script'), l = d.scripts[d.scripts.length - 1]; s.settings = o || {}; s.src = "\/\/grimy-bicycle.com\/bWXdVDs.dcGTlS0wY\/WtcY\/weOmG9XucZ\/UslekCPPTXYG1lNWD\/APwQMIj_QctqNbjnUZ0-MQD\/Ahy-NgQZ"; s.async = true; s.referrerPolicy = 'no-referrer-when-downgrade'; l.parentNode.insertBefore(s, l); })({})</script>
